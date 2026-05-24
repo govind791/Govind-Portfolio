@@ -2,54 +2,52 @@
 
 ## Features
 
-- Responsive portfolio pages (Home, Projects, Skills, Education, Experience)
-- Contact form with email functionality
-- AI-powered chat feature using Google Gemini API
-- Modular architecture with Flask Blueprints
+- **Responsive Design:** Fully responsive pages (Home, Projects, Skills, Education, Experience) optimized for both desktop and mobile.
+- **Contact Form Integration:** Functional contact form with live email routing powered by `Flask-Mail`.
+- **Modular Architecture:** Built using Flask Blueprints for clean routing, scalability, and separation of concerns.
+- **Smooth Animations:** Integrated with AOS (Animate On Scroll) for dynamic UI interactions as users scroll.
+- **Production Ready:** Fully containerized with a `Dockerfile` and dynamic port configuration for seamless deployment to platforms like Render or Railway.
 
 ## Project Structure
 
-```
-portfolio/
+Govind-Portfolio/
 ├── app/
-│   ├── __init__.py          # Flask app factory
+│   ├── __init__.py          # Flask app factory & blueprint registration
 │   ├── config.py            # Configuration settings
-│   ├── forms.py             # WTForms for contact form
-│   ├── utils.py             # Utility functions (AI chat logic)
+│   ├── forms.py             # WTForms for the contact form
 │   └── routes/
-│       ├── main.py          # Main portfolio routes
-│       ├── contact.py       # Contact form routes
-│       └── chat.py          # AI chat routes
-├── templates/               # Jinja2 templates
-├── static/                  # CSS, JS, images
+│       ├── main.py          # Main portfolio UI routes
+│       └── contact.py       # Contact form and email logic
+├── templates/               # Jinja2 HTML templates
+├── static/                  # CSS, JS, and image assets
 ├── main.py                  # Application entry point
 ├── requirements.txt         # Python dependencies
-├── pyproject.toml           # Project metadata
-└── some_information.txt     # Personal info for AI chat
-```
+├── Dockerfile               # Containerization instructions
+└── .gitignore               # Git ignore rules
 
 ## Setup
 
-1. Install dependencies:
-
+1. Create and activate a virtual environment (Recommended):
    ```bash
-   pip install -r requirements.txt
-   ```
-2. Set up environment variables in a `.env` file:
+   python -m venv .venv
+   # On Windows:
+   .venv\Scripts\activate
+   # On Mac/Linux:
+   source .venv/bin/activate
+Install dependencies:
 
-   ```
-   GEMINI_API_KEY=your_gemini_api_key
-   SESSION_SECRET=your_secret_key
-   MAIL_USERNAME=your_email@gmail.com
-   MAIL_PASSWORD=your_email_password
-   MAIL_DEFAULT_SENDER=your_email@gmail.com
-   ```
-3. Run the application:
+Bash
+pip install -r requirements.txt
+Set up environment variables in a .env file:
 
-   ```bash
-   python main.py
-   ```
+Code snippet
+SESSION_SECRET=your_secret_key
+MAIL_USERNAME=your_email@gmail.com
+MAIL_PASSWORD=your_app_password
+MAIL_DEFAULT_SENDER=your_email@gmail.com
+PORT=5000
+Run the application:
 
-The app will run on `http://localhost:8080`.
-
-## Deployment
+Bash
+python main.py
+The app will run locally at http://127.0.0.1:5000.
