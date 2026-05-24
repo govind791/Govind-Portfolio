@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Experience - Jay Govind Kumar{% endblock %}
+
+{% block content %}
+<section class="experience py-5">
+    <div class="container">
+        <h2 data-aos="fade-up">Professional Experience</h2>
+
+        <div class="project-box" data-aos="fade-up" data-aos-delay="100">
+            <h3>Data Science & ML Engineer Intern &mdash; <em>PSS Automate Private Limited, Hyderabad</em></h3>
+            <p class="tech-stack">
+                <strong>Tech:</strong> FastAPI &bull; OpenCV &bull; Docker &bull; PostgreSQL &bull; REST APIs
+            </p>
+            <ul>
+                <li>Built a production-grade microservices platform with multi-tenant architecture, JWT authentication, and scalable REST APIs for appointment, invoice, and payment management</li>
+                <li>Developed an AI-based computer vision system using OpenCV to detect and count bacterial colonies with automated quality assessment metrics</li>
+                <li>Implemented secure RBAC, async processing, and Docker-based deployment, ensuring scalable backend performance across real-world datasets</li>
+            </ul>
+        </div>
+
+        <div class="project-box" data-aos="fade-up" data-aos-delay="200">
+            <h3>Data Science & Software Developer Intern &mdash; <em>Arthgrow Solutions Pvt Ltd (Snap Funds)</em></h3>
+            <p class="tech-stack">
+                <strong>Tech:</strong> PostgreSQL &bull; REST APIs &bull; Frontend Technologies &bull; Data Analytics
+            </p>
+            <ul>
+                <li>Developed and enhanced frontend interfaces for financial and loan management applications using modern web technologies, improving responsiveness and user experience</li>
+                <li>Worked on data science and analytics tasks using PostgreSQL for data management, preprocessing, querying, and extracting business insights from financial datasets</li>
+                <li>Collaborated with backend and analytics teams to integrate REST APIs, optimize database workflows, and support scalable real-world business applications</li>
+            </ul>
+        </div>
+
+        <div class="project-box" data-aos="fade-up" data-aos-delay="300">
+            <h3>Cybersecurity Intern &mdash; <em>Centre for Development of Advanced Computing (CDAC Noida)</em></h3>
+            <p class="tech-stack">
+                <strong>Tech:</strong> Penetration Testing &bull; Vulnerability Assessment &bull; Security Frameworks
+            </p>
+            <ul>
+                <li>Conducted penetration testing and vulnerability assessments, uncovering 15+ critical issues and leading effective remediation efforts</li>
+                <li>Developed and deployed security frameworks, improving compliance and reducing threat exposure by 40%</li>
+                <li>Delivered technical reports with actionable insights, supporting executive-level cybersecurity decisions</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .experience .project-box {
+        text-align: left;
+        padding: 2rem 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .experience .project-box h3 {
+        text-align: left;
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .experience .project-box p {
+        text-align: left;
+    }
+
+    .experience .tech-stack {
+        margin-bottom: 1rem;
+    }
+
+    .experience .project-box ul {
+        padding-left: 1.2rem;
+        margin-top: 0.8rem;
+    }
+
+    .experience .project-box ul li {
+        margin-bottom: 0.45rem;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+</style>
+{% endblock %}

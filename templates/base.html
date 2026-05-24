@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Jay Govind Kumar - Portfolio{% endblock %}</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">JAY GOVIND KUMAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if active == 'home' %}active{% endif %}" href="{{ url_for('main.index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active == 'projects' %}active{% endif %}" href="{{ url_for('main.projects') }}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active == 'skills' %}active{% endif %}" href="{{ url_for('main.skills') }}">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active == 'education' %}active{% endif %}" href="{{ url_for('main.education') }}">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active == 'experience' %}active{% endif %}" href="{{ url_for('main.experience') }}">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if active == 'contact' %}active{% endif %}" href="{{ url_for('contact.contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <div class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show mx-3 mt-3" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="{{ url_for('main.index') }}">Home</a>
+                <a href="{{ url_for('main.projects') }}">Projects</a>
+                <a href="{{ url_for('main.skills') }}">Skills</a>
+                <a href="{{ url_for('main.education') }}">Education</a>
+                <a href="{{ url_for('main.experience') }}">Experience</a>
+                <a href="{{ url_for('contact.contact') }}">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/Jay-Govind-Kumar/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/govind791" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:jaygovind8298@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Jay Govind Kumar. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

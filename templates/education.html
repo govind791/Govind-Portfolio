@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Education & Certifications - Jay Govind Kumar{% endblock %}
+
+{% block content %}
+<section class="education py-5">
+    <div class="container">
+        <h2 data-aos="fade-up">Education Background</h2>
+        <div class="project-box" data-aos="fade-up" data-aos-delay="100">
+            <h3>Indian Institute of Information Technology, Senapati, Manipur</h3>
+            <p>B.Tech (Electronics and Communication Engineering)</p> 
+            <p>CGPA - 7.00/10</p>
+            <p><span>Duration:</span> 2022 - 2026</p>
+            <div class="more-details">
+                <a href="https://www.iiitmanipur.ac.in/" target="_blank">Visit Institute Website <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+
+        <h2 class="mt-5" data-aos="fade-up">Online Certifications</h2>
+        
+        <div class="container px-0">
+            <div class="row justify-content-center">
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-box1" data-aos="fade-up" data-aos-delay="100">
+                        <a href="{{ url_for('static', filename='images/deep-learning.jpg') }}" target="_blank" class="project-link">
+                            <img src="{{ url_for('static', filename='images/deep-learning.jpg') }}" alt="Deep Learning NPTEL">
+                            <div class="text-overlay">
+                                <p>NPTEL: Deep Learning</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-box1" data-aos="fade-up" data-aos-delay="150">
+                        <a href="{{ url_for('static', filename='images/python.jpg') }}" target="_blank" class="project-link">
+                            <img src="{{ url_for('static', filename='images/python.jpg') }}" alt="The Joy of Computing using Python">
+                            <div class="text-overlay">
+                                <p>NPTEL: The Joy of Computing using Python</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-box1" data-aos="fade-up" data-aos-delay="200">
+                        <a href="{{ url_for('static', filename='images/vlsi.jpg') }}" target="_blank" class="project-link">
+                            <img src="{{ url_for('static', filename='images/vlsi.jpg') }}" alt="VLSI Design Flow: RTL to GDS">
+                            <div class="text-overlay">
+                                <p>NPTEL: VLSI Design Flow: RTL to GDS</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-box1" data-aos="fade-up" data-aos-delay="250">
+                        <a href="{{ url_for('static', filename='images/iot.jpg') }}" target="_blank" class="project-link">
+                            <img src="{{ url_for('static', filename='images/iot.jpg') }}" alt="Introduction to Internet of Things">
+                            <div class="text-overlay">
+                                <p>NPTEL: Introduction to Internet of Things</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-box1" data-aos="fade-up" data-aos-delay="300">
+                        <a href="{{ url_for('static', filename='images/ar-vr.jpg') }}" target="_blank" class="project-link">
+                            <img src="{{ url_for('static', filename='images/ar-vr.jpg') }}" alt="Foundation for Virtual and Augmented Reality Systems">
+                            <div class="text-overlay">
+                                <p>NPTEL: Foundation for Virtual & Augmented Reality</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-box1" data-aos="fade-up" data-aos-delay="350">
+                        <a href="{{ url_for('static', filename='images/constitution.jpg') }}" target="_blank" class="project-link">
+                            <img src="{{ url_for('static', filename='images/constitution.jpg') }}" alt="Constitution Law and Public Administration in India">
+                            <div class="text-overlay">
+                                <p>NPTEL: Constitution Law & Public Admin</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .project-box1 {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 350px;  /* Requested Width */
+        height: 320px; /* Requested Height */
+        margin: 0 auto; /* Centers the 350px box perfectly inside the grid column */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+    }
+    .project-box1:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .project-box1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top; 
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+    }
+    .text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 12px 10px;
+        text-align: center;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .text-overlay p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+</style>
+{% endblock %}

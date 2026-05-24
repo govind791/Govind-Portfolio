@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Jay Govind Kumar - Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero" id="home">
+    <div class="hero-bg" style="background-image: url({{ url_for('static', filename='img/tech-bg-1.svg') }});"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0" data-aos="fade-left">
+                <div class="text-center">
+                   <img src="{{ url_for('static', filename='img/myphoto.jpeg') }}" alt="Jay Govind Kumar" class="profile-image img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                <h1>Hi, I'm <span class="text-highlight">Jay Govind Kumar</span></h1>
+                <p>Data Scientist | Machine Learning | Generative AI | Backend Developer</p>
+                <p>Passionate about developing innovative solutions using artificial intelligence and machine learning technologies.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/Jay-Govind-Kumar/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/govind791" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jaygovind8298@gmail.com" target="_blank" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a href="{{ url_for('static', filename='Jay_Govind__.pdf') }}" target="_blank" download class="resume-btn"><i class="fas fa-download me-2"></i>Download Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-5">
+    <div class="container">
+        <h2 data-aos="fade-up">About Me</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="about-content">
+                    <p>
+                        I'm <strong>Jay Govind Kumar</strong>, an engineering student at IIIT Manipur specializing in VLSI Engineering. I have a strong foundation in <strong>Backend Development, GenAI, Machine Learning, and Data Science</strong>.
+                    </p>
+                    <p>
+                        I have hands-on experience in Deep Learning, NLP, and fine-tuning Large Language Models (LLMs). I've worked on projects involving text summarization, recommender systems, and text generation using a custom GPT model and LSTM on the Shakespeare dataset. I'm also skilled in MLOps tools such as Docker, Kubernetes, and CI/CD pipelines.
+                    </p>
+                    <p>
+                        I have hands-on experience through internships at CDAC, Arthgrow Solutions, and PSS Automate, where I implemented secure RBAC systems, OpenCV-based computer vision pipelines, and resilient backend architectures.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="featured-projects" style="background-image: url({{ url_for('static', filename='img/tech-bg-2.svg') }});">
+    <div class="container">
+        <h2 data-aos="fade-up">Featured Projects</h2>
+        <div class="row">
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/multimodel_rag.svg') }}" alt="Microservices Platform" class="project-img">
+                    <div class="project-info">
+                        <h3>Microservices-Based Appointment Management Platform</h3>
+                        <p>Built a scalable FastAPI microservices architecture with 5 independent services and REST-based communication.</p>
+                        <p>Implemented JWT auth, RBAC, and multi-tenant isolation for secure, role-based access using PostgreSQL + Alembic. Developed appointment, invoicing, and payment APIs and deployed using Docker with PyTest testing and Swagger docs.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">FastAPI</span>
+                            <span class="project-tag">Microservices</span>
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/clean_flowchart.svg') }}" alt="Deep RAG Agent" class="project-img">
+                    <div class="project-info">
+                        <h3>Deep RAG Agent</h3>
+                        <p>Engineered an Agentic RAG System leveraging LangGraph orchestration and Groq's LLAMA 3.3-70B to autonomously retrieve, evaluate, and synthesize answers from a ChromaDB vector knowledge base.</p>
+                        <p>Designed a Self-Healing Query Pipeline with intelligent document relevance grading and deployed a Cost-Free Production-Ready AI Stack using Hugging Face embeddings.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">LangGraph</span>
+                            <span class="project-tag">RAG</span>
+                            <span class="project-tag">Agentic AI</span>
+                            <span class="project-tag">ChromaDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mx-auto mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/ml-visual-1.svg') }}" alt="CFU Detection" class="project-img">
+                    <div class="project-info">
+                        <h3>CFU Detection & Counting Service</h3>
+                        <p>Built a scalable FastAPI backend with Celery workers, Redis queue, and MinIO S3 storage for async colony detection on TFA agar plate images.</p>
+                        <p>Implemented OpenCV adaptive thresholding pipeline, JWT authentication, and PostgreSQL with Alembic migrations for auditable CFU counting results.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">OpenCV</span>
+                            <span class="project-tag">Celery</span>
+                            <span class="project-tag">Redis</span>
+                            <span class="project-tag">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="{{ url_for('main.projects') }}" class="resume-btn">View All Projects <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="achievements">
+    <div class="container">
+        <h2 data-aos="fade-up">Achievements</h2>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="achievement-card" data-aos="fade-up">
+                    <h3><i class="fas fa-trophy me-2"></i> Campus Ambassador TATVA Fest 2026</h3>
+                    <p>Selected for national-level outreach and student engagement at IIT Bombay, promoting technical events and coordinating with regional campuses.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-medal me-2"></i> Campus Ambassador eDC IIT Delhi</h3>
+                    <p>Promoted initiatives and supported campus outreach for the Entrepreneurship Development Cell at IIT Delhi, contributing to the BECon 2026 initiative.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact-brief" style="background-image: url({{ url_for('static', filename='img/tech-bg-1.svg') }});">
+    <div class="container text-center py-5">
+        <h2 data-aos="fade-up">Let's Connect</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Have a project idea or question? Feel free to reach out!</p>
+        <a href="{{ url_for('contact.contact') }}" class="resume-btn" data-aos="fade-up" data-aos-delay="200">Contact Me <i class="fas fa-paper-plane ms-2"></i></a>
+    </div>
+</section>
+{% endblock %}

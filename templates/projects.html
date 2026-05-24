@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Jay Govind Kumar{% endblock %}
+
+{% block content %}
+<section class="projects py-5">
+    <div class="container">
+        <h2 data-aos="fade-up">My Projects</h2>
+        <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Explore my portfolio of Backend Development, Data Science, and GenAI projects</p>
+        
+        <div class="row">
+            
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/multimodel_rag.svg') }}" alt="Microservices Platform" class="project-img">
+                    <div class="project-info">
+                        <h3>Microservices-Based Appointment Management Platform</h3>
+                        <p>Built a scalable FastAPI microservices architecture with 5 independent services and REST-based communication.</p>
+                        <p>Implemented JWT auth, RBAC, and multi-tenant isolation using PostgreSQL + Alembic for secure data management. Developed appointment, invoicing, and payment APIs, standardizing the deployment pipeline using Docker.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">FastAPI</span>
+                            <span class="project-tag">Microservices</span>
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/clean_flowchart.svg') }}" alt="Deep RAG Agent" class="project-img">
+                    <div class="project-info">
+                        <h3>Deep RAG Agent</h3>
+                        <p>Engineered an Agentic RAG System leveraging LangGraph orchestration and Groq's LLAMA 3.3-70B for advanced document retrieval and reasoning.</p>
+                        <p>Designed a Self-Healing Query Pipeline with intelligent document relevance grading. Deployed a Cost-Free Production-Ready AI Stack using Hugging Face embeddings, ChromaDB, and the Groq API.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">LangGraph</span>
+                            <span class="project-tag">RAG</span>
+                            <span class="project-tag">Agentic AI</span>
+                            <span class="project-tag">ChromaDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/ml-visual-1.svg') }}" alt="CFU Detection" class="project-img">
+                    <div class="project-info">
+                        <h3>CFU Detection & Counting Service</h3>
+                        <p>Built a scalable FastAPI backend with Celery workers, Redis queue, and MinIO S3 storage for asynchronous colony detection workflows.</p>
+                        <p>Implemented a computer vision pipeline using OpenCV adaptive thresholding. Developed job submission and batch processing APIs deployed seamlessly via Docker Compose.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">OpenCV</span>
+                            <span class="project-tag">Celery</span>
+                            <span class="project-tag">Redis</span>
+                            <span class="project-tag">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/LangChain_Content_Summarizer.svg') }}" alt="Text Summarization Web App" class="project-img">
+                    <div class="project-info">
+                        <h3>Text Summarization Web App</h3>
+                        <p>Developed an interactive web application using Streamlit and powerful Transformer models (T5, BART, Pegasus) to efficiently summarize text.</p>
+                        <p>Features support for both Abstractive and Extractive summarization modes. Designed with a CPU-safe PyTorch pipeline, customizable summary length controls, and downloadable summary exports.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Transformers</span>
+                            <span class="project-tag">PyTorch</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791/-text_summarization" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="project-card">
+                    <!-- <img src="{{ url_for('static', filename='img/ml-visual-2.svg') }}" alt="DataDiagnostics" class="project-img"> -->
+                    <div class="project-info">
+                        <h3>DataDiagnostics</h3>
+                        <p>Built a robust data analysis and visualization tool using Streamlit to ensure data quality and perform comprehensive statistical testing.</p>
+                        <p>Engineered features for data validation, outlier detection (IQR, Z-Score), Shapiro-Wilk normality tests, and interactive charting (Bar, Hist, Scatter, Heatmaps). Containerized the application using Docker for seamless deployment.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791/DataDiagnostics" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://datadiagnostics.streamlit.app/" target="_blank" class="ms-3"><i class="fas fa-external-link-alt"></i> Live App</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='img/prompttovideo.svg') }}" alt="Gemini StreamChat" class="project-img">
+                    <div class="project-info">
+                        <h3>Gemini StreamChat</h3>
+                        <p>Developed an advanced, multimodal AI chatbot utilizing Streamlit and Google's Gemini Flash Generative AI model.</p>
+                        <p>Implemented support for text, image, and voice inputs, alongside real-time text-to-speech output using gTTS. Integrated customizable system personas and persistent chat history management within a responsive dark-themed UI.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">Google Gemini AI</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Chatbot</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791/Gemini-StreamChat" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4 mx-auto" data-aos="fade-up">
+                <div class="project-card">
+                    <!-- <img src="{{ url_for('static', filename='img/advanced-machine.png') }}" alt="AI Market Analysis Crew" class="project-img"> -->
+                    <div class="project-info">
+                        <h3>AI Market Analysis Crew</h3>
+                        <p>Architected a multi-agent AI system leveraging the CrewAI framework and Groq's LLAMA 3.3-70B to autonomously generate comprehensive market analysis reports.</p>
+                        <p>Designed a sequential workflow utilizing four specialized agent roles (Researcher, Competitor Analyst, Strategist, Writer) and integrated optional live web search capabilities via the Serper API.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">CrewAI</span>
+                            <span class="project-tag">Groq API</span>
+                            <span class="project-tag">Agentic AI</span>
+                            <span class="project-tag">LangChain</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/govind791/Ai-market-crew" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
