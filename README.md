@@ -9,7 +9,7 @@
 - **Production Ready:** Fully containerized with a `Dockerfile` and dynamic port configuration for seamless deployment to platforms like Render or Railway.
 
 ## Project Structure
-
+```text
 Govind-Portfolio/
 ├── app/
 │   ├── __init__.py          # Flask app factory & blueprint registration
